@@ -2,16 +2,15 @@ package level1.exercise1;
 
 public class Main {
 
-    @SuppressWarnings("deprecation")
     public static void main(String[] args) {
 
-        OnlineWorker onlineWorker = new OnlineWorker(
+        Worker onlineWorker = new OnlineWorker(
                 "Arnau",
                 "Casals",
                 20
         );
 
-        OnsiteWorker onsiteWorker = new OnsiteWorker(
+        Worker onsiteWorker = new OnsiteWorker(
                 "Paco",
                 "Ramirez",
                 30
@@ -22,9 +21,5 @@ public class Main {
 
         System.out.println(onsiteWorker.getName() + " salary: "
                 + onsiteWorker.calculateSalary(160));
-
-        onlineWorker.oldInternetConnection();
-        onsiteWorker.oldFuelSystem();
-
     }
 }

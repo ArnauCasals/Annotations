@@ -11,5 +11,8 @@ public class OnsiteWorker extends Worker {
     public double calculateSalary(int workedHours) {
         return workedHours * getHourlyRate() + gasoline;
     }
-
+    @Deprecated
+    public void oldFuelSystem() {
+        System.out.println("Using the old fuel reimbursement system.");
+    }
 }
