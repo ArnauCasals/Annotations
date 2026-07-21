@@ -2,9 +2,9 @@ package level1.exercise1;
 
 public class Worker {
 
-    private String name;
-    private String surname;
-    private double hourlyRate;
+    private final String name;
+    private final String surname;
+    private final double hourlyRate;
 
     public Worker(String name, String surname, double hourlyRate) {
         this.name = name;
