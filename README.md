@@ -1,110 +1,85 @@
 # Annotations
 
-**Description:**
-This project is part of the Java Backend specialization and focuses on learning and practicing Java annotations. It covers the use of built-in annotations such as `@Override`, `@Deprecated`, and `@SuppressWarnings`, helping to improve code readability, maintenance, and developer experience.
+## Description
+
+This project is part of the Java Backend specialization and focuses on learning and practicing Java annotations.
+
+It covers the use of built-in annotations such as:
+
+- `@Override`
+- `@Deprecated`
+- `@SuppressWarnings`
+
+These annotations help improve code readability, maintenance, and developer experience.
 
 ---
 
-## 📌 Exercise Statement
+# Level 1 - Exercise 1: Override
 
-### Level 1 - Exercise 1: Override and Deprecated
+## Description
 
-Create a class hierarchy with the following classes:
+Create a class hierarchy representing different types of workers.
 
-* `Worker`
-* `OnlineWorker`
-* `OnsiteWorker`
+The project contains:
 
-The `Worker` class contains the attributes `name`, `surname`, and `hourlyRate`, as well as the method `calculateSalary()`.
+- `Worker`
+- `OnlineWorker`
+- `OnsiteWorker`
 
-The child classes override this method using the `@Override` annotation:
+The parent class contains the attributes:
 
-* **OnlineWorker:** Adds a fixed Internet flat rate to the salary.
-* **OnsiteWorker:** Adds a shared gasoline allowance to the salary.
+- `name`
+- `surname`
+- `hourlyRate`
 
-Additionally:
+and the method:
 
-* Mark obsolete methods in the child classes using `@Deprecated`.
-* Invoke these deprecated methods from the `Main` class.
-* Suppress deprecation warnings using `@SuppressWarnings("deprecation")`.
-
----
-
-## ✨ Features
-
-* Object-Oriented Programming (OOP)
-* Inheritance
-* Method overriding with `@Override`
-* Deprecated methods with `@Deprecated`
-* Warning suppression with `@SuppressWarnings`
-* Salary calculation for different worker types
-* Console demonstration
-
----
-
-## 🛠 Technologies
-
-* Java 26
-* Maven
-* IntelliJ IDEA
-* Git & GitHub
-
----
-
-## 🚀 Installation & Execution
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/ArnauCasals/Annotations.git
+```java
+calculateSalary()
 ```
 
-2. Open the project with IntelliJ IDEA.
+The child classes override this method using the `@Override` annotation.
 
-3. Build the project using Maven.
+### Features
 
-4. Run the `Main` class located in:
+- ✅ Object-Oriented Programming
+- ✅ Inheritance
+- ✅ Method overriding with `@Override`
+- ✅ Polymorphism
+- ✅ Different salary calculations
 
-```text
-src/main/java/level1/exercise1/Main.java
-```
+### Salary Rules
 
----
+**OnlineWorker**
 
-## 📂 Project Structure
+Adds a fixed Internet flat rate to the salary.
 
-```text
-Annotations
-├── README.md
-├── pom.xml
-└── src
-    ├── main
-    │   ├── java
-    │   │   ├── level1
-    │   │   │   ├── exercise1
-    │   │   │   │   ├── Main.java
-    │   │   │   │   ├── Worker.java
-    │   │   │   │   ├── OnlineWorker.java
-    │   │   │   │   └── OnsiteWorker.java
-    │   │   │   └── exercise2
-    │   │   │       ├── Main.java
-    │   │   │       ├── Worker.java
-    │   │   │       ├── OnlineWorker.java
-    │   │   │       └── OnsiteWorker.java
-    │   │   └── org
-    │   │       └── example
-    │   │           └── Main.java
-    │   └── resources
-    └── test
-        └── java
+**OnsiteWorker**
 
-```
+Adds a shared gasoline allowance to the salary.
 
 ---
 
-## 📸 Demo
+# Level 1 - Exercise 2: Deprecated Methods
 
-Example output:
+## Description
+
+This exercise extends the previous worker hierarchy by adding obsolete methods.
+
+Some methods in the child classes are marked as deprecated using the `@Deprecated` annotation.
+
+These methods are then called from an external class while suppressing the generated warnings using `@SuppressWarnings`.
+
+### Features
+
+- ✅ Deprecated methods with `@Deprecated`
+- ✅ Warning suppression with `@SuppressWarnings`
+- ✅ Understanding obsolete API management
+- ✅ External invocation of deprecated methods
+
+---
+
+## Example Output
 
 ```text
 === Salaries ===
@@ -118,12 +93,65 @@ Using the old fuel reimbursement system.
 
 ---
 
-## 🧩 Technical Notes
+# Technologies
+
+- Java 21
+- Maven
+- IntelliJ IDEA
+- Git & GitHub
+
+---
+
+# Installation & Execution
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/ArnauCasals/Annotations.git
+```
+
+2. Open the project with IntelliJ IDEA.
+
+3. Compile using Maven:
+
+```bash
+mvn clean compile
+```
+
+4. Run the corresponding `Main` class.
+
+---
+
+# Project Structure
+
+```text
+Annotations
+├── README.md
+├── pom.xml
+└── src
+    └── main
+        └── java
+            └── level1
+                ├── exercise1
+                │   ├── Main.java
+                │   ├── Worker.java
+                │   ├── OnlineWorker.java
+                │   └── OnsiteWorker.java
+                └── exercise2
+                    ├── Main.java
+                    ├── Worker.java
+                    ├── OnlineWorker.java
+                    └── OnsiteWorker.java
+```
+
+---
+
+# Technical Notes
 
 This project demonstrates:
 
-* Method overriding using inheritance.
-* Java built-in annotations.
-* The purpose of marking obsolete methods with `@Deprecated`.
-* How to suppress compiler warnings with `@SuppressWarnings`.
-* Basic polymorphism through a worker class hierarchy.
+- The use of Java annotations.
+- Method overriding with `@Override`.
+- How `@Deprecated` marks methods that should no longer be used.
+- How `@SuppressWarnings("deprecation")` hides warnings when deprecated methods are intentionally called.
+- Basic inheritance and polymorphism.
